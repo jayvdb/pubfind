@@ -24,7 +24,7 @@ def get_parser():
             """
             pubfind looks for missing publications.
             """.rstrip()),
-        default_config_files=['.pubfindrc'])
+        default_config_files=['~/.pubfindrc', '.pubfindrc'])
 
     parser.add('-c', '--config', is_config_file=True,
                help='config file path')
