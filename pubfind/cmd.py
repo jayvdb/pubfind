@@ -36,8 +36,6 @@ def main():
 
     print('!', end='\n')
 
-    output_file = open(options.output_csv, 'w')
-
     with codecs.open(options.output_csv, 'w', 'utf8') as output_file:
         output_file.write('EID,DOI,Document Type,Cited by,Title\n')
 
