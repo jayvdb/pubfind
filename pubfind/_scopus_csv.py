@@ -97,4 +97,7 @@ class CSVProcessor(object):
             if 'Index Keywords' in row and row['Index Keywords']:
                 item.index_keywords = row['Index Keywords'].split('; ')
 
+            if 'Cited by' in row:
+                item.scopus_citation_count = row['Cited by']
+
             yield item

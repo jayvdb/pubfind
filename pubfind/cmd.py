@@ -39,11 +39,14 @@ def main():
     output_file = open(options.output_csv, 'w')
 
     with codecs.open(options.output_csv, 'w', 'utf8') as output_file:
+        output_file.write('EID,DOI,Document Type,Cited by,Title\n')
+
         for item in missing_pubs:
             csv_title = item.title.replace('"', '\\"')
-            output_file.write('%s,%s,%s,"%s"\n'
+            output_file.write('%s,%s,%s,%s,"%s"\n'
                               % (item.EID,
                                  item.DOI,
                                  item.scopus_document_type,
+                                 item.scopus_citation_count,
                                  csv_title))
     print('%s written' % options.output_csv)
