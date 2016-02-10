@@ -20,7 +20,7 @@ if sys.version_info[0] == 2:
 
 setup(
     name=name,
-    version='0.1.1',
+    version='0.2.0',
     description='Publication search command line tool.',
     keywords='csl scopus csv json schema publication article journal',
     author='John Vandenberg',
