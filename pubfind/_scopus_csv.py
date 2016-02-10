@@ -37,9 +37,10 @@ class CSVProcessor(object):
             if doi:
                 item.DOI = doi.lower()
 
-            issn = row['ISSN'] or None
-            if issn:
-                item.ISSN = issn[:4] + '-' + issn[4:]
+            if 'ISSN' in row:
+                issn = row['ISSN']
+                if issn:
+                    item.ISSN = issn[:4] + '-' + issn[4:]
 
             volume = row['Volume'] or None
             if volume:
