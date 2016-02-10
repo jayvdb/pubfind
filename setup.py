@@ -32,7 +32,6 @@ setup(
     entry_points={
         'console_scripts': [name + ' = ' + name + '.cmd:main'],
     },
-    package_data={name: ['*.json']},
     classifiers=[
         'Development Status :: 3 - Alpha',
         'Environment :: Console',
