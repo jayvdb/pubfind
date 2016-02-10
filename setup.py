@@ -3,6 +3,8 @@
 """pubfind setup."""
 from __future__ import unicode_literals
 
+import sys
+
 from setuptools import setup, find_packages
 
 name=str('pubfind')
@@ -12,6 +14,9 @@ dependencies = [
     'ConfigArgParse',
     'requests',
 ]
+
+if sys.version_info[0] == 2:
+    dependencies.append('unicodecsv')
 
 setup(
     name=name,
