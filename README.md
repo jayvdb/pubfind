@@ -3,7 +3,7 @@ Find missing publications from Scopus.
 
 # Installation
 
-  $ pip install pubfind
+   $ pip install pubfind
 
 # Usage
 
